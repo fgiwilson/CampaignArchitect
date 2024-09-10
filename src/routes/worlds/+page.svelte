@@ -1,1 +1,1 @@
-<h1>Your Worlds</h1>
+<h1 class="text-3xl font-bold underline">Your Worlds</h1>

@@ -1,1 +1,1 @@
-<h1>You Campaigns in:[world name]</h1>
+<h1 class="text-3xl font-bold underline">You Campaigns in:[world name]</h1>
