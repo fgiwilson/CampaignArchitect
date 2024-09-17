@@ -7,9 +7,12 @@ export default {
       desktop: '1248px',
     },
     colors:{
-        moss:'#8A9A5B',
-        rust:'#CD7F32',
-        
+        lightBlue:'#B8D8D8',
+        cadetGray:'#7A9E9F',
+        paynesGray: '#4F6367',
+        beige:'#EEF5DB',
+        bittersweet:'#FE5F55',
+        flame:'#DC602E'
     },
     extend: {},
   },
