@@ -19,6 +19,9 @@ export default {
         darkGray: '#878787',
         logoBeige: '#edce98'
     },
+    fontFamily:{
+      sans: ['Afacad']
+    },
     extend: {},
   },
   plugins: [],
