@@ -1,10 +1,15 @@
 import type { PageServerLoad } from './create/$types';
-import { Worldm } from '$lib/models/world';
+import { WorldModel } from '$lib/models/models';
 import { dbConnect } from '$lib/server/db';
 
 export const load: PageServerLoad = async () => {
 	await dbConnect();
-	return {
-		worldsL: await Worldm.find({})
+
+	let worlds = await WorldModel.find().lean();
+
+	worlds = JSON.parse(JSON.stringify(worlds));
+
+	return{
+		worlds,
 	};
 };
