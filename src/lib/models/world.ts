@@ -1,6 +1,6 @@
-import type { RPGAWorld } from "$lib/types";
-import mongoose from "mongoose";
-import { Model } from "mongoose";
+import type { RPGAWorld } from '$lib/types';
+import mongoose from 'mongoose';
+import { Model } from 'mongoose';
 
 //schemas
 const worldSchema = new mongoose.Schema<RPGAWorld>({
@@ -9,4 +9,4 @@ const worldSchema = new mongoose.Schema<RPGAWorld>({
 	worldImage: { type: String, required: false }
 });
 
-export const WorldModel:Model<RPGAWorld> = mongoose.model<RPGAWorld>('World', worldSchema);
+export const Worldm: Model<RPGAWorld> = mongoose.model<RPGAWorld>('Worldm', worldSchema);

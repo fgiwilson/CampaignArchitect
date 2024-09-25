@@ -1,16 +1,17 @@
 import type { Actions } from './$types';
-import { main } from '$lib/db';
-import { WorldModel } from '$lib/models/world';
+//import mongoose from 'mongoose';
+import { dbConnect, dbDisconnect,} from '$lib/server/db';
+import { Worldm } from '$lib/models/world';
 
 export const actions = {
-	default: async ({cookies, request}) => {
+	default: async ({request}) => {
+		await dbConnect();
 		const data = await request.formData();
         const newWorldName = data.get('worldName');
-		main();
-		
-		const newWorld = new WorldModel({
+		const newWorld = new Worldm({
 			name: newWorldName,
 		});
 		await newWorld.save();
+		await dbDisconnect();
 	},
 } satisfies Actions;

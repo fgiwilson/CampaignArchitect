@@ -11,6 +11,6 @@
     <HeroImage {...imgDetails}/>
 </div>
 <div class="container mx-auto">
-    <h1 class="text-3xl font-bold underline">Welcome to RPG Architect</h1>
+    <h1 class="text-4xl font-bold text-bittersweet">Welcome to RPG Architect</h1>
 </div>
 
