@@ -25,12 +25,14 @@ export interface RPGACampaign {
 	world: Types.ObjectId
 }
 
-export interface RPGANpc {
+export interface RPGANpc{
 	name: string,
 	description: string,
 	organizations?: Types.ObjectId[]
 }
-
+export interface RPGASession{
+	name:string;
+}
 export interface RPGAOrg {
 	name: string,
 	hq?: string,
