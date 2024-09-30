@@ -11,10 +11,10 @@ export interface RPGAWorld {
 export interface RPGALocation{
 	name: string;
 	world:string;
-	campaigns?:[string];
+	campaigns?:string[];
 	type?: string;
 	mainImage?: string;
-	gallery?:[string];
+	gallery?:string[];
 	description?: string;
 }
 
@@ -22,10 +22,20 @@ export interface RPGALocation{
 export interface RPGACampaign{
 	name: string;
 	world: string;
+
 }
 
 export interface RPGANpc{
 	name:string;
 	description:string;
 	
+}
+
+export interface RPGASession{
+	name:string;
+	lastSessionReview?:string;
+	playerReview?:string;
+	strongStart?:string;
+	players:string[];
+	campaign:string;
 }
