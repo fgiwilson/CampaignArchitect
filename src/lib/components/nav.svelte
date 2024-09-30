@@ -1,13 +1,31 @@
-<nav class="flex flex-row justify-content w-full py-4 md:py-0 px-4 text-lg text-gray-700 bg-white ">
-	<div class="flex p-5">
-		<span><img class="flex flex-auto" src="%sveltekit.assets%/RPGA_Logo.jpg" alt=""></span>
-	</div>
-	<div class="flex w-full p-2">
-		<ul class="text-base text-gray-700 pt-4 md:flex md:justify-between md:pt-0 flex flex-row">
-			<li class="md:p-4 py-2 block hover:text-purple-400 px-4"><a href="/">Home</a></li>
-			<li class="md:p-4 py-2 block hover:text-purple-400 px-4"><a href="/worlds/">Your Worlds</a></li>
-			<li class="md:p-4 py-2 block hover:text-purple-400 px-4"><a href="/worlds/campaigns">Your Campaigns</a></li>
-		</ul>
-	</div>
+<script>
+	//import Logo from '../../../static/RPGA_Logo.jpg?enhanced'
+</script>
 
-</nav>
+<div class="border-b-2 border-lightBlue w-full sticky top-0 z-40 ">
+	<div class="max-w-7xl mx-auto relative flex items-center">
+		<a href="/" class="pr-2 ">
+			<enhanced:img class="flex-none w-[4rem] overflow-hidden md:w-auto" src="../../../static/RPGA_Logo.jpg" alt="">
+			</enhanced:img>
+		</a>
+		<div class="relative md:flex items-center ml-auto">
+			<nav class=" text-lg leading-6 font-semibold text-cadetGray dark:text-lightBlue">
+				<div class="flex space-x-8">
+					<ul class="flex li:items-end pt-4 content-end md:pt-0">
+						<li class="md:p-4 py-2 block text-paynesGray hover:text-cadetGray px-4">
+							<a href="/">Home</a>
+						</li>
+						<li class="md:p-4 py-2 block text-paynesGray hover:text-cadetGray px-4">
+							<a href="/worlds/">Your Worlds</a>
+						</li>
+						<li class="md:p-4 py-2 block text-paynesGray hover:text-cadetGray px-4">
+							<a href="/worlds/campaigns">Your Campaigns</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+
+	</div>
+	
+</div>

@@ -2,7 +2,11 @@
     import "../app.css";
     import Nav from "$lib/components/nav.svelte";
 </script>
-<Nav />
-<div class="flex flex-auto p-5">
-    <slot />
+<div class="">
+    <div class="flex">
+        <Nav />
+    </div>
+    <div class="p-0">
+        <slot />
+    </div>
 </div>
