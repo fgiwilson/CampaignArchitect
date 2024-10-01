@@ -1,12 +1,8 @@
-//Interfaces for Mongoose
+//Interfaces for Mongoose Schemas
 import { Types } from 'mongoose';
+
 //World types
-export interface RPGAWorld {
-	name: string,
-	numCampaigns?: number,
-	worldImage?: string,
-	campaigns?: Types.ObjectId[]
-}
+
 
 //Locations (geo)
 export interface RPGALocation {
@@ -20,10 +16,7 @@ export interface RPGALocation {
 }
 
 //Campaigns
-export interface RPGACampaign {
-	name: string,
-	world: Types.ObjectId
-}
+
 
 export interface RPGANpc{
 	name: string,

@@ -3,13 +3,12 @@ import { WorldModel } from '$lib/models/models';
 import { dbConnect } from '$lib/server/db';
 
 export const load: PageServerLoad = async () => {
-	await dbConnect();
+	
+	const foundWorlds = await WorldModel.find().lean();
 
-	let worlds = await WorldModel.find().lean();
-
-	worlds = JSON.parse(JSON.stringify(worlds));
+	const pWorlds = JSON.parse(JSON.stringify(foundWorlds));
 
 	return{
-		worlds,
+		pWorlds,
 	};
 };

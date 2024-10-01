@@ -5,7 +5,7 @@
 <div class="border-b-2 border-lightBlue w-full sticky top-0 z-40 ">
 	<div class="max-w-7xl mx-auto relative flex items-center">
 		<a href="/" class="pr-2 ">
-			<enhanced:img class="flex-none w-[4rem] overflow-hidden md:w-auto" src="../../../static/RPGA_Logo.jpg" alt="">
+			<enhanced:img class="flex-none w-[5rem] overflow-hidden md:w-auto" src="../../../static/RPGA_Logo.jpg" alt="">
 			</enhanced:img>
 		</a>
 		<div class="relative md:flex items-center ml-auto">
