@@ -2,6 +2,9 @@ import type { PageServerLoad } from './create/$types';
 import { WorldModel } from '$lib/models/models';
 import { dbConnect } from '$lib/server/db';
 
+if(!dbConnect()){
+	dbConnect();
+}
 export const load: PageServerLoad = async () => {
 	
 	const foundWorlds = await WorldModel.find().lean();

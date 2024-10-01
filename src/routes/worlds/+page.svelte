@@ -28,9 +28,7 @@
 	<div class="flex">
 		<section class="flex-row">
 			<h2 class="text-2xl mb-5">Create a new world!</h2>
-			<button class="p-2 bg-lightBlue hover:bg-cadetGray hover:text-lightBlue rounded"
-				><a href="/worlds/create">Create new world</a></button
-			>
+			<button class="p-2 bg-lightBlue hover:bg-cadetGray hover:text-lightBlue rounded"><a href="/worlds/create">Create new world</a></button>
 		</section>
 	</div>
 </div>
