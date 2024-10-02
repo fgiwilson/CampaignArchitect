@@ -11,7 +11,7 @@
 		image = '',
 		title = 'Title',
 		imageAlt = 'defaultAlt',
-		desc = 'Six pounders run a rig bilge water Sail ho heave to draft mizzenmast jury mast lookout reef. Six pounders transom coxswain barkadeer gally scurvy starboard bilged on her anchor to go on account take a caulk. Yellow Jack doubloon hornswaggle chantey carouser jib yo-ho-ho bilged on her anchor handsomely clap of thunder.',
+		desc = 'Placeholder Description - Default Text',
 		link = ''
 	}: cardProps = $props();
 </script>
@@ -25,10 +25,10 @@
 			<div class="border-b-2">
 				{#if { link } !== ''}
 					<a href={link}
-						><h3 class="text-xl font-bold text-paynesGray hover:text-cadetGray">{title}</h3></a
+						><h3 class="text-2xl font-semibold text-paynesGray hover:text-cadetGray">{title}</h3></a
 					>
 				{:else if { link } === ''}
-					<h3 class="text-xl text-bold text-paynesGray">{title}</h3>
+					<h3 class="text-2xl text-bold text-paynesGray">{title}</h3>
 				{/if}
 			</div>
 			<div class="p-1 my-4">

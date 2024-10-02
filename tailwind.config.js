@@ -112,11 +112,14 @@ export default {
 			white: '#ffffff',
 		},
 		fontFamily: {
-			sans: ['Afacad'],
-      serif:['Oswald']
-
+			body: ['Afacad', 'sans-serif'],
+      		heading1:['Kalnia'],
+			heading2:['Oswald'],
 		},
 		extend: {}
 	},
-	plugins: []
+	plugins: [
+		// eslint-disable-next-line @typescript-eslint/no-require-imports
+		require('@tailwindcss/forms'),
+	],
 };

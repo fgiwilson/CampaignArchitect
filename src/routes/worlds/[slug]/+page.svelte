@@ -10,10 +10,10 @@
 <HeroImage image={placeholder} alt="some alt text" />
 <div class="mx-auto container">
 	<div class="flex flex-col mt-4">
-		<h1 class="text-4xl font-bold text-bittersweet my-2 border-b-2">{theWorld.name}</h1>
-        <h3 class="text-2xl text-bold text-cadetGray my-1">Description</h3>
-		<p class="text-lg my-3 ml-2">{theWorld.mainDesc}</p>
-        <h2 class="text-2xl font-bold text-paynesGray my-2 border-b-2">Campaigns in {theWorld.name}</h2>
+		<h1 class="text-4xl font-medium text-bittersweet my-2 font-heading1">{theWorld.name}</h1>
+        <h3 class="text-2xl text-medium text-cadetGray">Description:</h3>
+		<p class="mb-3 ml-1">{theWorld.mainDesc}</p>
+        <h2 class="text-3xl font-semibold font-heading2">Campaigns in {theWorld.name}</h2>
 	</div>
 </div>
 

@@ -14,9 +14,9 @@
 </div>
 <div class="mx-auto container">
 	<div class="flex flex-col mt-4">
-		<h1 class="text-4xl font-bold text-bittersweet my-2">Your Worlds</h1>
+		<h1 class="text-4xl font-medium text-bittersweet my-2 font-heading1">Your Worlds</h1>
 		<section class="my-5">
-			<h2 class="text-2xl">Open an existing world</h2>
+			<h2 class="text-3xl font-semibold font-heading2">Open an existing world</h2>
 			<div class="flex space-x-8 items-center mr-auto">
 				<ul class="flex li:items-end content-end flex-wrap">
 					{#each pWorlds as myWorld, i}
