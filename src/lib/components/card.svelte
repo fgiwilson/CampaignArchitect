@@ -16,8 +16,8 @@
 	}: cardProps = $props();
 </script>
 
-<div class="flex flex-col bg-white rounded m-3">
-	<div class="p-1 max-desktop:min-h-96">
+<div class="flex flex-col bg-white rounded m-3 shadow-md border-lightBlue-100 border-1 shadow-lightBlue-200">
+	<div class="p-1 min-h-36">
 		<div class="w-full">
 			<img src={image} alt={imageAlt} />
 		</div>
@@ -32,7 +32,7 @@
 				{/if}
 			</div>
 			<div class="p-1 my-4">
-				<p>{desc}</p>
+				<p class="mb-2">{desc}</p>
 			</div>
 			<div class="my-2">
 				<a class="rounded py-3 px-4 bg-lightBlue-500 hover:bg-lightBlue-600 text-lightBlue-50" href={link}>Go to {title}</a>
