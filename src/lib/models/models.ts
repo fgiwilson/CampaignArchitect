@@ -5,6 +5,8 @@ export interface RPGAWorld {
 	numCampaigns?: number;
 	worldImage?: string;
 	campaigns?: Types.ObjectId[];
+	mainDesc?:string;
+	
 }
 
 //schemas
@@ -12,7 +14,9 @@ const worldSchema = new Schema({
 	name: { type: String, required: true },
 	numCampaigns: { type: Number, required: false },
 	worldImage: { type: String, required: false },
-	campaigns: { type: Schema.Types.ObjectId, ref: 'CampaignModel' }
+	campaigns: { type: Schema.Types.ObjectId, ref: 'CampaignModel' },
+	mainDesc:{type: String, required: false},
+	
 });
 
 export interface RPGACampaign {

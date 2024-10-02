@@ -1,3 +1,6 @@
 import { dbConnect } from "$lib/server/db";
+import mongoose from "mongoose";
 
-dbConnect();
+if(mongoose.connection.readyState !== 1){
+	dbConnect();
+}
