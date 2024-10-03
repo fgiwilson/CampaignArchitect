@@ -34,7 +34,7 @@
 	</div>
 	<div class="flex flex-col">
 		<div class="flex flex-row">
-			<h2 class="font-heading2 text-3xl my-2 flex flex-auto">Features!</h2>
+			<h2 class="font-heading2 text-3xl my-2 flex flex-auto">Features! We Have Those!</h2>
 		</div>
 		<div class="flex flex-wrap md:flex-nowrap w-full">
 			<div class="flex-auto">

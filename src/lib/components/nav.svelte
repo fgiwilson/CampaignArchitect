@@ -19,10 +19,10 @@
 							<a href="/">Home</a>
 						</li>
 						<li class="md:p-4 py-2 block text-paynesGray hover:text-cadetGray px-4">
-							<a href="/worlds/">Your Worlds</a>
+							<a href="/worlds/">Worlds</a>
 						</li>
 						<li class="md:p-4 py-2 block text-paynesGray hover:text-cadetGray px-4">
-							<a href="/worlds/campaigns">Your Campaigns</a>
+							<a href="/worlds/campaigns">Campaigns</a>
 						</li>
 					</ul>
 				</div>
