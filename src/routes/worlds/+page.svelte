@@ -19,7 +19,7 @@
 			<h2 class="text-3xl font-semibold font-heading2">Open an existing world</h2>
 			<div class="flex space-x-8 items-center mr-auto">
 				<ul class="flex li:items-end content-end flex-wrap">
-					{#each pWorlds as myWorld, i}
+					{#each pWorlds as myWorld}
 						<div class="w-1/3">
 							<li>
 								<Card

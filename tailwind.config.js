@@ -97,29 +97,29 @@ export default {
 				950: '#292929'
 			},
 			logoBeige: {
-        '50': '#fdf9ef',
-        '100': '#f9f0db',
-        '200': '#f2ddb6',
-        '300': '#edce98',
-        '400': '#e1a656',
-        '500': '#da8e35',
-        '600': '#cb762b',
-        '700': '#a95c25',
-        '800': '#874925',
-        '900': '#6d3d21',
-        '950': '#3b1e0f',
-      },
-			white: '#ffffff',
+				50: '#fdf9ef',
+				100: '#f9f0db',
+				200: '#f2ddb6',
+				300: '#edce98',
+				400: '#e1a656',
+				500: '#da8e35',
+				600: '#cb762b',
+				700: '#a95c25',
+				800: '#874925',
+				900: '#6d3d21',
+				950: '#3b1e0f'
+			},
+			white: '#ffffff'
 		},
 		fontFamily: {
 			body: ['Afacad', 'sans-serif'],
-      		heading1:['Kalnia'],
-			heading2:['Oswald'],
+			heading1: ['Kalnia'],
+			heading2: ['Oswald']
 		},
 		extend: {}
 	},
 	plugins: [
 		// eslint-disable-next-line @typescript-eslint/no-require-imports
-		require('@tailwindcss/forms'),
-	],
+		require('@tailwindcss/forms')
+	]
 };

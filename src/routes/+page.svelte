@@ -38,16 +38,28 @@
 		</div>
 		<div class="flex flex-wrap md:flex-nowrap w-full">
 			<div class="flex-auto">
-				<Card image={img} title="Feature 1" desc="Indicant pueri, in quibus ut in speculis natura cernitur. <mark>Efficiens dici potest.</mark> Bonum
-			integritas corporis: misera debilitas."/>
+				<Card
+					image={img}
+					title="Feature 1"
+					desc="Indicant pueri, in quibus ut in speculis natura cernitur. <mark>Efficiens dici potest.</mark> Bonum
+			integritas corporis: misera debilitas."
+				/>
 			</div>
 			<div class="flex-auto">
-				<Card image={img} title="Feature 2" desc="Indicant pueri, in quibus ut in speculis natura cernitur. <mark>Efficiens dici potest.</mark> Bonum
-			integritas corporis: misera debilitas."/>
+				<Card
+					image={img}
+					title="Feature 2"
+					desc="Indicant pueri, in quibus ut in speculis natura cernitur. <mark>Efficiens dici potest.</mark> Bonum
+			integritas corporis: misera debilitas."
+				/>
 			</div>
 			<div class="flex-auto">
-				<Card image={img} title="Feature 3" desc="Indicant pueri, in quibus ut in speculis natura cernitur. <mark>Efficiens dici potest.</mark> Bonum
-			integritas corporis: misera debilitas."/>
+				<Card
+					image={img}
+					title="Feature 3"
+					desc="Indicant pueri, in quibus ut in speculis natura cernitur. <mark>Efficiens dici potest.</mark> Bonum
+			integritas corporis: misera debilitas."
+				/>
 			</div>
 		</div>
 	</div>

@@ -15,7 +15,7 @@ export const actions = {
 
 		const newWorld = {
 			name: nWorldName,
-			mainDesc: nWorldDesc,
+			mainDesc: nWorldDesc
 		};
 		await WorldModel.create(newWorld);
 		redirect(303, '/worlds');
