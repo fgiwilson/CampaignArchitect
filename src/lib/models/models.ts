@@ -1,20 +1,29 @@
-import * as Interfaces from '$lib/utils/types';
-import {Schema, model} from 'mongoose';
- 
+import { Schema, model, Types } from 'mongoose';
+
+//World Data Model
+export interface RPGAWorld {
+	name: string;
+	numCampaigns?: number;
+	worldImage?: string;
+	mainDesc?: string;
+}
 //schemas
-const worldSchema: Schema = new Schema<Interfaces.RPGAWorld>({
+const worldSchema = new Schema({
 	name: { type: String, required: true },
 	numCampaigns: { type: Number, required: false },
 	worldImage: { type: String, required: false },
-	campaigns: {type: Schema.ObjectId, ref:'Campaign'}
+	mainDesc: { type: String, required: false }
 });
-
-const campaignSchema:Schema = new Schema<Interfaces.RPGACampaign>({
-	name:{type: String, required: true},
-	world:{type: Schema.Types.ObjectId, ref:'WorldModel', required:true}
+//Campaign Data Model
+export interface RPGACampaign {
+	name: string;
+	world: Types.ObjectId;
+}
+const campaignSchema = new Schema({
+	name: { type: String, required: true },
+	world: { type: Schema.Types.ObjectId, ref: 'WorldModel', required: true }
 });
-
 
 //export models
-export const WorldModel = model<Interfaces.RPGAWorld>('Worlds', worldSchema);
-export const CampaignModel = model<Interfaces.RPGACampaign>('Campaigns', campaignSchema);
+export const WorldModel = model<RPGAWorld>('Worlds', worldSchema);
+export const CampaignModel = model<RPGACampaign>('Campaigns', campaignSchema);

@@ -2,28 +2,38 @@
 	//import Card from "$lib/components/card.svelte";
 	import HeroImage from '$lib/components/heroImage.svelte';
 	import placeholder from '$lib/images/placeholder-hero.webp';
+	import Card from '$lib/components/card.svelte';
 	import type { PageServerData } from './$types';
 
 	export let data: PageServerData;
-
-	let { worlds } = data;
+	let { pWorlds } = data;
 </script>
 
-<div >
+<div>
 	<HeroImage image={placeholder} alt="some alt text" />
 </div>
 <div class="mx-auto container">
 	<div class="flex flex-col mt-4">
-		<h1 class="text-4xl font-bold text-bittersweet">Your Worlds</h1>
+		<h1 class="text-4xl font-medium text-bittersweet my-2 font-heading1">Your Worlds</h1>
 		<section class="my-5">
-			<h2 class="text-2xl">Open an existing world</h2>
-			<ul>
-				{#each worlds as world, i}
-					<li>
-						{world.name}
-					</li>
-				{/each}
-			</ul>
+			<h2 class="text-3xl font-semibold font-heading2">Open an existing world</h2>
+			<div class="flex space-x-8 items-center mr-auto">
+				<ul class="flex li:items-end content-end flex-wrap">
+					{#each pWorlds as myWorld}
+						<div class="w-1/3">
+							<li>
+								<Card
+									title={myWorld.name}
+									imageAlt="Placeholder Alt"
+									image={placeholder}
+									desc={myWorld.mainDesc}
+									link="/worlds/{myWorld._id}"
+								/>
+							</li>
+						</div>
+					{/each}
+				</ul>
+			</div>
 		</section>
 	</div>
 	<div class="flex">

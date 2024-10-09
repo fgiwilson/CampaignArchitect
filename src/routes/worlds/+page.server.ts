@@ -1,15 +1,17 @@
 import type { PageServerLoad } from './create/$types';
 import { WorldModel } from '$lib/models/models';
 import { dbConnect } from '$lib/server/db';
+import mongoose from 'mongoose';
 
+if (mongoose.connection.readyState !== 1) {
+	dbConnect();
+}
 export const load: PageServerLoad = async () => {
-	await dbConnect();
+	const foundWorlds = await WorldModel.find();
 
-	let worlds = await WorldModel.find().lean();
+	const pWorlds = JSON.parse(JSON.stringify(foundWorlds));
 
-	worlds = JSON.parse(JSON.stringify(worlds));
-
-	return{
-		worlds,
+	return {
+		pWorlds
 	};
 };
