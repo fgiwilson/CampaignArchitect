@@ -1,6 +1,7 @@
 <script lang="ts">
 	import HeroImage from '$lib/components/heroImage.svelte';
 	import img from '$lib/images/placeholder-hero.webp';
+	//@ts-ignore
 	import Card from '$lib/components/card.svelte';
 </script>
 

@@ -2,11 +2,12 @@
 	//import Card from "$lib/components/card.svelte";
 	import HeroImage from '$lib/components/heroImage.svelte';
 	import placeholder from '$lib/images/placeholder-hero.webp';
+	//@ts-ignore
 	import Card from '$lib/components/card.svelte';
 	import type { PageServerData } from './$types';
 
 	export let data: PageServerData;
-	let { pWorlds } = data;
+	let { foundWorlds } = data;
 </script>
 
 <div>
@@ -19,7 +20,7 @@
 			<h2 class="text-3xl font-semibold font-heading2">Open an existing world</h2>
 			<div class="flex space-x-8 items-center mr-auto">
 				<ul class="flex li:items-end content-end flex-wrap">
-					{#each pWorlds as myWorld}
+					{#each foundWorlds as myWorld}
 						<div class="w-1/3">
 							<li>
 								<Card

@@ -9,7 +9,7 @@ if (mongoose.connection.readyState === 0) {
 }
 
 export const load: PageServerLoad = async ({ params }) => {
-	const id = params.slug;
+	const id = params.world;
 	const foundWorld = await WorldModel.findById(id);
 
 	if (foundWorld) {
