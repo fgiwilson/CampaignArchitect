@@ -22,18 +22,18 @@
 			/>
 		</div>
 		<div class="m-1">
-			<div><label class="mb-1 font-bold" for="campaignDesc">World Description:</label></div>
+			<div><label class="mb-1 font-bold" for="campaignDesc">Campaign Description:</label></div>
 			<textarea
 				rows="5"
 				cols="50"
-				name="cammpaignDesc"
+				name="campaignDesc"
 				id="campaignDesc"
 				class="form-textarea p-1 rounded text-gray-700 font-semibold focus:border-paynesGray-400"
 			></textarea>
 		</div>
 		<button
 			class="p-1 border border-r-cadetGray hover:bg-lightBlue hover:cursor-pointer mt-2"
-			type="submit">Create</button
+			type="submit">Create Campaign</button
 		>
 	</form>
 </div>

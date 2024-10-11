@@ -1,6 +1,6 @@
 import type { Actions } from './$types';
 import { dbConnect } from '$lib/server/db';
-import { WorldModel } from '$lib/models/models';
+import { World } from '$lib/models/models';
 import { redirect } from '@sveltejs/kit';
 import mongoose from 'mongoose';
 
@@ -17,7 +17,7 @@ export const actions = {
 			name: nWorldName,
 			mainDesc: nWorldDesc
 		};
-		await WorldModel.create(newWorld);
+		await World.create(newWorld);
 		redirect(303, '/worlds');
 	}
 } satisfies Actions;

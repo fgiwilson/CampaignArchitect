@@ -1,11 +1,15 @@
 <script lang="ts">
 	import HeroImage from '$lib/components/heroImage.svelte';
+	//@ts-ignore
+	import Card from '$lib/components/card.svelte';
+	import type { PageServerData } from '../$types';
 	import placeholder from '$lib/images/placeholder-hero.webp';
-	import type {PageServerData} from "../$types"
-	
+
 	export let data: PageServerData;
+	//@ts-ignore
 	let { theWorld } = data;
-	
+	//@ts-ignore
+	let { theCampaigns } = data;
 </script>
 
 <HeroImage image={placeholder} alt="some alt text" />
@@ -16,9 +20,33 @@
 		<p class="mb-3 ml-1">{theWorld.mainDesc}</p>
 		<h2 class="text-3xl font-semibold font-heading2">Campaigns in {theWorld.name}</h2>
 		{#if theWorld.numCampaigns === 0}
-			<p class="pt-2">Ther eare currently no campaigns for this world yet. Create a new one using the button below.</p>
-			<a class="p-2 bg-lightBlue-300 hover:bg-lightBlue-700 text-lightBlue-800 hover:text-lightBlue-50 rounded-md w-fit mt-3" href="{theWorld._id}/campaigns/create">Create a New Campaign</a>
+			<p class="pt-2">
+				There are currently no campaigns for this world yet. Create a new one using the button
+				below.
+			</p>
+		{:else}
+			<ul class="flex li:items-end content-end flex-wrap">
+				{#each theCampaigns as campaign}
+					<li class="w-1/3">
+						<Card
+							title={campaign.name}
+							link="{theWorld._id}/campaign/{campaign._id}"
+							image={placeholder}
+							desc={campaign.campaignDesc}
+						/>
+					</li>
+				{/each}
+			</ul>
 		{/if}
+		<div>
+			<h2 class="text-3xl font-semibold font-heading2">
+				Create new campaigns in this world
+			</h2>
+		</div>
+		<a
+		class="p-2 bg-lightBlue-300 hover:bg-lightBlue-700 text-lightBlue-800 hover:text-lightBlue-50 rounded-md w-fit mt-3"
+		href="{theWorld._id}/campaigns/create">Create a New Campaign</a
+	>
 	</div>
 </div>
 

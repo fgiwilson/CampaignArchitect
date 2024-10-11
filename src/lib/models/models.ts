@@ -25,9 +25,9 @@ export interface RPGACampaign {
 const campaignSchema = new Schema({
 	name: { type: String, required: true },
 	campaignDesc: {type: String, required: false},
-	world: { type: Schema.Types.ObjectId, ref: 'WorldModel', required: true }
+	world: { type: Schema.Types.ObjectId, ref: 'World', required: true }
 });
 
 //export models
-export const WorldModel = model<RPGAWorld>('Worlds', worldSchema);
-export const CampaignModel = model<RPGACampaign>('Campaigns', campaignSchema);
+export const World = model<RPGAWorld>('World', worldSchema);
+export const Campaign = model<RPGACampaign>('Campaign', campaignSchema);
