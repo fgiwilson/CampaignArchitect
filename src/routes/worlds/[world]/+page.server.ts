@@ -6,7 +6,7 @@ import { error } from '@sveltejs/kit';
 import { Campaign } from '$lib/models/models';
 
 if (mongoose.connection.readyState === 0) {
-	dbConnect();
+	await dbConnect();
 }
 
 export const load: PageServerLoad = async ({ params }) => {

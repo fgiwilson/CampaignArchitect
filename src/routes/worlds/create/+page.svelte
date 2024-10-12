@@ -32,7 +32,7 @@
 			></textarea>
 		</div>
 		<button
-			class="p-1 border border-r-cadetGray hover:bg-lightBlue hover:cursor-pointer mt-2"
+			class="p-2 mt-5 bg-lightBlue hover:bg-cadetGray hover:text-lightBlue rounded"
 			type="submit">Create</button
 		>
 	</form>

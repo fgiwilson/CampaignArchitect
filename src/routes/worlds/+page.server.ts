@@ -4,7 +4,7 @@ import { dbConnect } from '$lib/server/db';
 import mongoose from 'mongoose';
 
 if (mongoose.connection.readyState !== 1) {
-	dbConnect();
+	await dbConnect();
 }
 export const load: PageServerLoad = async () => {
 	const foundWorlds = JSON.parse(JSON.stringify(await World.find()));
