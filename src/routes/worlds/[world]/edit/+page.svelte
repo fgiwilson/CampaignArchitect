@@ -2,6 +2,7 @@
 	import type { PageServerData } from '../$types';
 
 	export let data: PageServerData;
+	//@ts-ignore
 	const { world } = data;
 </script>
 

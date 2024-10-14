@@ -18,7 +18,12 @@
 		<h1 class="text-4xl font-medium text-bittersweet my-2 font-heading1">{theWorld.name}</h1>
 		<h3 class="text-2xl text-medium text-cadetGray">Description:</h3>
 		<p class="mb-3 ml-1">{theWorld.mainDesc}</p>
-		<a href="{"{}edit"}" class="p-2 bg-lightBlue-300 hover:bg-lightBlue-700 text-lightBlue-800 hover:text-lightBlue-50 rounded-md w-fit mt-3">Edit World</a>
+		<a
+			href={'{}edit'}
+			class="p-2 bg-lightBlue-300 hover:bg-lightBlue-700 text-lightBlue-800 hover:text-lightBlue-50 rounded-md w-fit mt-3"
+			>Edit World</a
+		>
+		<hr class="my-5"/>
 		<h2 class="text-3xl font-semibold font-heading2">Campaigns in {theWorld.name}</h2>
 		{#if theWorld.numCampaigns === 0}
 			<p class="pt-2">
@@ -40,14 +45,12 @@
 			</ul>
 		{/if}
 		<div>
-			<h2 class="text-3xl font-semibold font-heading2">
-				Create new campaigns in this world
-			</h2>
+			<h2 class="text-3xl font-semibold font-heading2">Create new campaigns in this world</h2>
 		</div>
 		<a
-		class="p-2 bg-lightBlue-300 hover:bg-lightBlue-700 text-lightBlue-800 hover:text-lightBlue-50 rounded-md w-fit mt-3"
-		href="{theWorld._id}/campaigns/create">Create a New Campaign</a
-	>
+			class="p-2 bg-lightBlue-300 hover:bg-lightBlue-700 text-lightBlue-800 hover:text-lightBlue-50 rounded-md w-fit mt-3"
+			href="{theWorld._id}/campaigns/create">Create a New Campaign</a
+		>
 	</div>
 </div>
 
