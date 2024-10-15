@@ -8,7 +8,7 @@
 </script>
 
 <HeroImage image={placeholder} alt="HERO" />
-<div class="mx-auto container">
+<div class="mx-auto max-w-7x1">
 	<div class="flex flex-col mt-4">
 		<h1 class="text-4xl font-medium text-bittersweet my-2 font-heading1">
 			You Campaigns in:{theWorld.name}

@@ -9,13 +9,12 @@ if (mongoose.connection.readyState !== 1) {
 }
 
 export const load: PageServerLoad = async ({ params }) => {
-	
 	const campaignID = params.campaign;
 	const campaign = await Campaign.findById(campaignID);
 	const cWorld = await World.findById(campaign.world);
 
 	return {
-		theCampaign : JSON.parse(JSON.stringify(campaign)),
-		theWorld : JSON.parse(JSON.stringify(cWorld))
+		theCampaign: JSON.parse(JSON.stringify(campaign)),
+		theWorld: JSON.parse(JSON.stringify(cWorld))
 	};
 };

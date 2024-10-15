@@ -24,7 +24,8 @@ export const load: PageServerLoad = async ({ params }) => {
 export const actions = {
 	edit: async ({ request, params }) => {
 		const data = await request.formData();
-        const worldID = params.world;
+		const worldID = params.world;
+
 		const worldName = data.get('worldName');
 		const worldDesc = data.get('worldDesc');
 
@@ -32,7 +33,7 @@ export const actions = {
 			name: worldName,
 			mainDesc: worldDesc
 		};
-		await World.findByIdAndUpdate(worldID,worldUpdates);
+		await World.findByIdAndUpdate(worldID, worldUpdates);
 		redirect(303, `/worlds/${worldID}`);
 	}
 } satisfies Actions;

@@ -14,16 +14,15 @@ export const actions = {
 		const data = await request.formData();
 		//grab the world ID from teh URL for later.
 		const worldID = params.world;
-		
+
 		//Grab the worlds document to update the numCampaigns
 		const tempWorld = await World.findById(worldID);
 		const world = JSON.parse(JSON.stringify(tempWorld));
 
 		//increment number of campaigns
 		const curNumCampaigns = world.numCampaigns;
-		const newNumCampaigns = {numCampaigns: curNumCampaigns + 1 };
+		const newNumCampaigns = { numCampaigns: curNumCampaigns + 1 };
 		World.findByIdAndUpdate(worldID, newNumCampaigns);
-
 
 		const newCampaign = {
 			name: data.get('campaignName'),

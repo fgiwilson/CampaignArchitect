@@ -2,7 +2,7 @@
 	//import Card from "$lib/components/card.svelte";
 	import HeroImage from '$lib/components/heroImage.svelte';
 	import placeholder from '$lib/images/placeholder-hero.webp';
-	//@ts-ignore
+	//@ts-expect-error - type not explicitely defined - using :any
 	import Card from '$lib/components/card.svelte';
 	import type { PageServerData } from './$types';
 

@@ -11,7 +11,7 @@ if (mongoose.connection.readyState !== 1) {
 
 export const load: PageServerLoad = async ({ params }) => {
 	const worldID = params.world;
-	console.log(worldID)
+	console.log(worldID);
 
 	const foundCampaigns = await Campaign.find({ world: worldID }).exec();
 	const world = await World.findById(worldID);
@@ -20,7 +20,7 @@ export const load: PageServerLoad = async ({ params }) => {
 		return {
 			campaigns: JSON.parse(JSON.stringify(foundCampaigns)),
 			theWorld: JSON.parse(JSON.stringify(world))
-		}
+		};
 	} else {
 		error(404, 'Not Found');
 	}

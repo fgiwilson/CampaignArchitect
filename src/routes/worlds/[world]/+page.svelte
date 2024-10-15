@@ -1,14 +1,14 @@
 <script lang="ts">
 	import HeroImage from '$lib/components/heroImage.svelte';
-	//@ts-ignore
+	//@ts-expect-error - type not explicitely defined - using :any
 	import Card from '$lib/components/card.svelte';
 	import type { PageServerData } from '../$types';
 	import placeholder from '$lib/images/placeholder-hero.webp';
 
 	export let data: PageServerData;
-	//@ts-ignore
+	//@ts-expect-error - type not explicitely defined - using :any
 	let { theWorld } = data;
-	//@ts-ignore
+	//@ts-expect-error - type not explicitely defined - using :any
 	let { theCampaigns } = data;
 </script>
 
@@ -19,11 +19,11 @@
 		<h3 class="text-2xl text-medium text-cadetGray">Description:</h3>
 		<p class="mb-3 ml-1">{theWorld.mainDesc}</p>
 		<a
-			href={'{}edit'}
+			href="{theWorld._id}/edit"
 			class="p-2 bg-lightBlue-300 hover:bg-lightBlue-700 text-lightBlue-800 hover:text-lightBlue-50 rounded-md w-fit mt-3"
 			>Edit World</a
 		>
-		<hr class="my-5"/>
+		<hr class="my-5" />
 		<h2 class="text-3xl font-semibold font-heading2">Campaigns in {theWorld.name}</h2>
 		{#if theWorld.numCampaigns === 0}
 			<p class="pt-2">

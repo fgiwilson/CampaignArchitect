@@ -2,7 +2,7 @@
 	import type { PageServerData } from '../$types';
 
 	export let data: PageServerData;
-	//@ts-ignore
+	//@ts-expect-error - type not explicitely defined - using :any
 	const { world } = data;
 </script>
 

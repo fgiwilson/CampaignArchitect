@@ -12,7 +12,7 @@ if (mongoose.connection.readyState === 0) {
 export const load: PageServerLoad = async ({ params }) => {
 	const id = params.world;
 	const foundWorld = await World.findById(id);
-	const foundCampaigns = await Campaign.find({world: id});
+	const foundCampaigns = await Campaign.find({ world: id });
 
 	if (foundWorld) {
 		return {
