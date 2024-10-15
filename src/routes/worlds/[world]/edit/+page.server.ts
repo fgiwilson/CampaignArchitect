@@ -35,5 +35,11 @@ export const actions = {
 		};
 		await World.findByIdAndUpdate(worldID, worldUpdates);
 		redirect(303, `/worlds/${worldID}`);
+	},
+	delete: async ({ params }) => {
+		const worldID = params.world;
+
+		await World.findByIdAndDelete(worldID);
+		redirect(303, '/worlds/');
 	}
 } satisfies Actions;

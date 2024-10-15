@@ -8,7 +8,7 @@
 <div class="object-cover">
 	<HeroImage image={img} alt="alt text" />
 </div>
-<div class="container mx-auto">
+<div class="max-w-7xl mx-auto">
 	<div class="flex flex-col mt-4">
 		<h1 class="text-4xl font-medium text-bittersweet my-2 font-heading1">
 			Welcome to RPG Architect

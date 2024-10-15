@@ -13,7 +13,7 @@
 <div>
 	<HeroImage image={placeholder} alt="some alt text" />
 </div>
-<div class="mx-auto container">
+<div class="mx-auto max-w-7xl">
 	<div class="flex flex-col mt-4">
 		<h1 class="text-4xl font-medium text-bittersweet my-2 font-heading1">Your Worlds</h1>
 		<section class="my-5">

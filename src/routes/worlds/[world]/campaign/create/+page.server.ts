@@ -4,6 +4,16 @@ import { Campaign } from '$lib/models/models';
 import { World } from '$lib/models/models';
 import { redirect } from '@sveltejs/kit';
 import mongoose from 'mongoose';
+import type { PageServerLoad } from './$types';
+
+export const load: PageServerLoad = async ({ params }) => {
+	const worldID = params.world;
+	const world = await World.findById(worldID);
+
+	return {
+		world: JSON.parse(JSON.stringify(world))
+	};
+};
 
 export const actions = {
 	create: async ({ request, params }) => {
@@ -30,6 +40,6 @@ export const actions = {
 			world: worldID
 		};
 		const cCampaign = await Campaign.create(newCampaign);
-		redirect(303, `/worlds/${worldID}/campaigns/${cCampaign._id}`);
+		redirect(303, `/worlds/${worldID}/campaign/${cCampaign._id}`);
 	}
 } satisfies Actions;
