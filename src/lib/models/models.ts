@@ -8,7 +8,6 @@ interface RPGAWorld {
 	numCampaigns?: number;
 	worldImage?: string;
 	mainDesc?: string;
-	
 }
 //Campaign Data Model
 interface RPGACampaign {
@@ -65,6 +64,8 @@ interface RPGAOrg {
 	notes?: string;
 	attitude?: string; //towards the party
 }
+
+
 //schemas
 const worldSchema = new Schema({
 	name: { type: String, required: true },
