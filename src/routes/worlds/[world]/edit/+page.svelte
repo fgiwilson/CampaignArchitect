@@ -18,9 +18,11 @@
 			type="submit">Save Changes</button
 		>
 	</form>
-	<hr class="my-5"/>
+	<hr class="my-5" />
 	<form action="?/delete" method="POST">
-		<button type="submit" class="p-2 rounded bg-flame-800 text-lightBlue-100 hover:bg-flame-600">Delte World</button>
+		<button type="submit" class="p-2 rounded bg-flame-800 text-lightBlue-100 hover:bg-flame-600"
+			>Delte World</button
+		>
 	</form>
 </div>
 

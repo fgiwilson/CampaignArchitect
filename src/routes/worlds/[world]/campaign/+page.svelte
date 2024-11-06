@@ -3,7 +3,6 @@
 	import placeholder from '$lib/images/placeholder-hero.webp';
 	import type { PageServerData } from '../$types';
 	export let data: PageServerData;
-	let { campaigns } = data;
 	let { theWorld } = data;
 </script>
 

@@ -1,21 +1,12 @@
-<svelte:options runes={true} />
-
 <script lang="ts">
-	interface cardProps {
-		title: string;
-		imageAlt?: string;
-		desc: string;
-		image?: string;
-		link?: string;
-	}
-
+	import Button from './Button.svelte';
 	let {
-		image = '',
-		title = 'Title',
-		imageAlt = 'defaultAlt',
-		desc = 'Placeholder Description - Default Text',
-		link = ''
-	}: cardProps = $props();
+		image = '', 
+		title = 'Title', 
+		imageAlt = 'defaultAlt', 
+		desc = 'Placeholder Description - Default Text', 
+		url = ''
+		}: {image:string; title:string; imageAlt:string; desc:string; url:string; } = $props();
 </script>
 
 <div
@@ -27,22 +18,17 @@
 		</div>
 		<div class="p-2">
 			<div class="border-b-2">
-				{#if !{ link }}
-					<a href={link}
-						><h3 class="text-2xl font-semibold text-paynesGray hover:text-cadetGray">{title}</h3></a
-					>
-				{:else if { link }}
+				{#if url =''}
 					<h3 class="text-2xl text-bold text-paynesGray">{title}</h3>
+				{:else}
+					<a href={url}><h3 class="text-2xl font-semibold text-paynesGray hover:text-cadetGray">{title}</h3></a>
 				{/if}
 			</div>
 			<div class="p-1 my-4">
 				<p class="mb-2">{desc}</p>
 			</div>
 			<div class="my-2">
-				<a
-					class="rounded py-3 px-4 bg-lightBlue-500 hover:bg-lightBlue-600 text-lightBlue-50"
-					href={link}>Go to {title}</a
-				>
+				<Button btnLabel="Got to {title}" btnType="anchor" btnStyle="secondary" link={url} />
 			</div>
 		</div>
 	</div>

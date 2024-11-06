@@ -1,75 +1,73 @@
 import { Schema, model, Types } from 'mongoose';
 
-//interfaces: 
+//interfaces:
 // Player Character Interface
 interface RPGAPlayerCharacter {
-    name: string;
-    campaign: Types.ObjectId;
-    player: string;
-    race: string;
-    class: string;
-    level: number;
-    experience: number;
-    alignment: string;
-    background: string;
-    inventory: string[];
-    abilities: {
-        strength: number;
-        dexterity: number;
-        constitution: number;
-        intelligence: number;
-        wisdom: number;
-        charisma: number;
-    };
-    hitPoints: {
-        current: number;
-        max: number;
-    };
-    armorClass: number;
-    skills: { [key: string]: number };
-    proficiencies: string[];
-    features: string[];
-    spells: string[];
-    backstory: string;
-    notes: string;
-    sessions: Types.ObjectId[];
+	name: string;
+	campaign: Types.ObjectId;
+	player: string;
+	race: string;
+	class: string;
+	level: number;
+	experience: number;
+	alignment: string;
+	background: string;
+	inventory: string[];
+	abilities: {
+		strength: number;
+		dexterity: number;
+		constitution: number;
+		intelligence: number;
+		wisdom: number;
+		charisma: number;
+	};
+	hitPoints: {
+		current: number;
+		max: number;
+	};
+	armorClass: number;
+	skills: { [key: string]: number };
+	proficiencies: string[];
+	features: string[];
+	spells: string[];
+	backstory: string;
+	notes: string;
+	sessions: Types.ObjectId[];
 }
 
 // Player Character Schema
 const playerCharacterSchema = new Schema<RPGAPlayerCharacter>({
-    name: { type: String, required: true },
-    campaign: { type: Schema.Types.ObjectId, ref: 'Campaign', required: true },
-    player: { type: String, required: true },
-    race: { type: String, required: true },
-    class: { type: String, required: true },
-    level: { type: Number, default: 1 },
-    experience: { type: Number, default: 0 },
-    alignment: String,
-    background: String,
-    inventory: [String],
-    abilities: {
-        strength: { type: Number, required: true },
-        dexterity: { type: Number, required: true },
-        constitution: { type: Number, required: true },
-        intelligence: { type: Number, required: true },
-        wisdom: { type: Number, required: true },
-        charisma: { type: Number, required: true }
-    },
-    hitPoints: {
-        current: { type: Number, required: true },
-        max: { type: Number, required: true }
-    },
-    armorClass: Number,
-    skills: { type: Map, of: Number },
-    proficiencies: [String],
-    features: [String],
-    spells: [String],
-    backstory: String,
-    notes: String,
-    sessions: [{ type: Schema.Types.ObjectId, ref: 'Session' }]
+	name: { type: String, required: true },
+	campaign: { type: Schema.Types.ObjectId, ref: 'Campaign', required: true },
+	player: { type: String, required: true },
+	race: { type: String, required: true },
+	class: { type: String, required: true },
+	level: { type: Number, default: 1 },
+	experience: { type: Number, default: 0 },
+	alignment: String,
+	background: String,
+	inventory: [String],
+	abilities: {
+		strength: { type: Number, required: true },
+		dexterity: { type: Number, required: true },
+		constitution: { type: Number, required: true },
+		intelligence: { type: Number, required: true },
+		wisdom: { type: Number, required: true },
+		charisma: { type: Number, required: true }
+	},
+	hitPoints: {
+		current: { type: Number, required: true },
+		max: { type: Number, required: true }
+	},
+	armorClass: Number,
+	skills: { type: Map, of: Number },
+	proficiencies: [String],
+	features: [String],
+	spells: [String],
+	backstory: String,
+	notes: String,
+	sessions: [{ type: Schema.Types.ObjectId, ref: 'Session' }]
 });
-
-export const PlayerCharacter = model<RPGAPlayerCharacter>('PlayerCharacter', playerCharacterSchema);
 
 //World Data Model
 interface RPGAWorld {
@@ -104,23 +102,21 @@ interface RPGANpc {
 	world: Types.ObjectId;
 	campaigns?: Types.ObjectId[];
 	alignment?: string;
-	attitude?: string;//towards the party
+	attitude?: string; //towards the party
 	sessions?: Types.ObjectId[];
-	notes?:string;
+	notes?: string;
 	image?: string;
-	bonds?:string;
-	flaws?:string;
-	traits?:string;
-	age?:number;
-	
+	bonds?: string;
+	flaws?: string;
+	traits?: string;
+	age?: number;
 }
-interface RPGAFront{
+interface RPGAFront {
 	name: string;
 	organization: Types.ObjectId;
-	objective:string;
+	objective: string;
 	grimPortants: string[];
-	description:string;
-
+	description: string;
 }
 interface RPGASession {
 	name: string;
@@ -142,7 +138,7 @@ interface RPGASecret {
 	description: string;
 }
 
-const secretSchema = new Schema({
+const secretSchema = new Schema<RPGASecret>({
 	title: { type: String, required: true },
 	session: { type: Schema.Types.ObjectId, ref: 'Session', required: true },
 	campaign: { type: Schema.Types.ObjectId, ref: 'Campaign', required: true },
@@ -150,7 +146,7 @@ const secretSchema = new Schema({
 });
 
 //schemas
-const locationSchema = new Schema({
+const locationSchema = new Schema<RPGALocation>({
 	name: { type: String, required: true },
 	world: { type: Schema.Types.ObjectId, ref: 'World', required: true },
 	description: { type: String, required: false },
@@ -160,7 +156,7 @@ const locationSchema = new Schema({
 	image: { type: String, required: false }
 });
 
-const npcSchema = new Schema({
+const npcSchema = new Schema<RPGANpc>({
 	name: { type: String, required: true },
 	campaign: { type: Schema.Types.ObjectId, ref: 'Campaign', required: true },
 	class: { type: String, required: false },
@@ -176,7 +172,7 @@ const npcSchema = new Schema({
 	age: { type: Number, required: false }
 });
 
-const frontSchema = new Schema({
+const frontSchema = new Schema<RPGAFront>({
 	name: { type: String, required: true },
 	organization: { type: Schema.Types.ObjectId, ref: 'Org', required: true },
 	objective: { type: String, required: true },
@@ -184,11 +180,11 @@ const frontSchema = new Schema({
 	description: { type: String, required: true }
 });
 
-const sessionSchema = new Schema({
+const sessionSchema = new Schema<RPGASesion>({
 	name: { type: String, required: true }
 });
 
-const orgSchema = new Schema({
+const orgSchema = new Schema<RPGAOrg>({
 	name: { type: String, required: true },
 	hq: { type: String, required: false },
 	locations: [{ type: String, required: false }],
@@ -198,14 +194,14 @@ const orgSchema = new Schema({
 	attitude: { type: String, required: false }
 });
 
-const worldSchema = new Schema({
+const worldSchema = new Schema<RPGAWorld>({
 	name: { type: String, required: true },
 	numCampaigns: { type: Number, required: false, default: 0 },
 	worldImage: { type: String, required: false },
 	mainDesc: { type: String, required: false }
 });
 
-const campaignSchema = new Schema({
+const campaignSchema = new Schema<RPGACampaign>({
 	name: { type: String, required: true },
 	campaignDesc: { type: String, required: false },
 	world: { type: Schema.Types.ObjectId, ref: 'World', required: true }
@@ -220,3 +216,4 @@ export const Session = model<RPGASession>('Session', sessionSchema);
 export const Org = model<RPGAOrg>('Org', orgSchema);
 export const Location = model<RPGALocation>('Location', locationSchema);
 export const Secret = model<RPGASecret>('Secret', secretSchema);
+export const PlayerCharacter = model<RPGAPlayerCharacter>('PlayerCharacter', playerCharacterSchema);
