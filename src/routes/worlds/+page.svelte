@@ -2,8 +2,8 @@
 	//import Card from "$lib/components/card.svelte";
 	import HeroImage from '$lib/components/heroImage.svelte';
 	import placeholder from '$lib/images/placeholder-hero.webp';
-	//@ts-expect-error - type not explicitely defined - using :any
-	import Card from '$lib/components/card.svelte';
+	import Button from '$lib/components/Button.svelte';
+	import Card from '$lib/components/Card.svelte';
 	import type { PageServerData } from './$types';
 
 	export let data: PageServerData;
@@ -28,7 +28,7 @@
 									imageAlt="Placeholder Alt"
 									image={placeholder}
 									desc={myWorld.mainDesc}
-									link="/worlds/{myWorld._id}"
+									url="/worlds/{myWorld._id}"
 								/>
 							</li>
 						</div>
@@ -39,10 +39,8 @@
 	</div>
 	<div class="flex">
 		<section class="flex-row">
-			<h2 class="text-3xl font-semibold font-heading2">Create a new world</h2>
-			<button class="p-2 mt-5 bg-lightBlue hover:bg-cadetGray hover:text-lightBlue rounded"
-				><a href="/worlds/create">Create new world</a></button
-			>
+			<h2 class="text-3xl font-semibold font-heading2 mb-5">Create a new world</h2>
+			<Button btnLabel="Create new world" btnType="anchor" btnStyle="secondary" link="/worlds/create" />
 		</section>
 	</div>
 </div>

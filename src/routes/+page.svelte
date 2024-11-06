@@ -2,7 +2,7 @@
 	import HeroImage from '$lib/components/heroImage.svelte';
 	import img from '$lib/images/placeholder-hero.webp';
 	//@ts-expect-error - type not explicitely defined - using :any
-	import Card from '$lib/components/card.svelte';
+	import Card from '$lib/components/Card.svelte';
 </script>
 
 <div class="object-cover">

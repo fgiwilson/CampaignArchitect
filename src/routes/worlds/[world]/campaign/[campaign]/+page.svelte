@@ -3,8 +3,8 @@
 	import type { PageServerData } from '../$types';
 	export let data: PageServerData;
 	//@ts-expect-error - type not explicitely defined - using :any
-	let { theCampaign } = data;
-	let { theWorld } = data;
+	let { theCampaign, theWorld } = data;
+	import Button from '$lib/components/Button.svelte';
 </script>
 
 <div>
@@ -22,4 +22,7 @@
 	<h3>Description:</h3>
 	<p>{theCampaign.campaignDesc}</p>
 	<p>Sessions:</p>
+	<div>
+		<Button btnLabel='Delete Campaign' btnType='anchor' btnStyle='danger' link='' />
+	</div>
 </div>

@@ -13,7 +13,7 @@
 			case 'secondary':
 				return `rounded py-3 px-4 bg-beige-400 hover:bg-beige-600 text-beige-50`;
 			case 'success':
-				return `rounded py-3 px-4 bg-lightBlue-400 hover:bg-lightBlue-600 text-success-50`;
+				return `rounded py-3 px-4 bg-lightBlue-400 hover:bg-lightBlue-600 text-lightBlue-50`;
 			case 'danger':
 				return `rounded py-3 px-4 bg-bittersweet-500 hover:bg-bittersweet-700 text-bittersweet-50`;
 			case 'warning':

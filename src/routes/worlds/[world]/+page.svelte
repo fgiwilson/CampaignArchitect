@@ -1,15 +1,14 @@
 <script lang="ts">
 	import HeroImage from '$lib/components/heroImage.svelte';
 	//@ts-expect-error - type not explicitely defined - using :any
-	import Card from '$lib/components/card.svelte';
+	import Card from '$lib/components/Card.svelte';
 	import type { PageServerData } from '../$types';
 	import placeholder from '$lib/images/placeholder-hero.webp';
+	import Button from '$lib/components/Button.svelte';
 
 	export let data: PageServerData;
 	//@ts-expect-error - type not explicitely defined - using :any
-	let { theWorld } = data;
-	//@ts-expect-error - type not explicitely defined - using :any
-	let { theCampaigns } = data;
+	let { theWorld, theCampaigns } = data;
 </script>
 
 <HeroImage image={placeholder} alt="some alt text" />
@@ -37,8 +36,9 @@
 					<li class="w-1/3">
 						<Card
 							title={campaign.name}
-							link="{theWorld._id}/campaign/{campaign._id}"
+							url="{theWorld._id}/campaign/{campaign._id}"
 							image={placeholder}
+							imageAlt="some alt text"
 							desc={campaign.campaignDesc}
 						/>
 					</li>

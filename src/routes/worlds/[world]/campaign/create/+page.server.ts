@@ -26,13 +26,14 @@ export const actions = {
 		const worldID = params.world;
 
 		//Grab the worlds document to update the numCampaigns
-		const tempWorld = await World.findById(worldID);
-		const world = JSON.parse(JSON.stringify(tempWorld));
-
-		//increment number of campaigns
+		const worldDoc = await World.findById(worldID);
+		const world = JSON.parse(JSON.stringify(worldDoc));
+		
 		const curNumCampaigns = world.numCampaigns;
-		const newNumCampaigns = { numCampaigns: curNumCampaigns + 1 };
-		World.findByIdAndUpdate(worldID, newNumCampaigns);
+		//increment number of campaigns
+		const newNumCampaigns = curNumCampaigns + 1;
+		await World.findByIdAndUpdate(worldID, { numCampaigns: newNumCampaigns });
+		
 
 		const newCampaign = {
 			name: data.get('campaignName'),

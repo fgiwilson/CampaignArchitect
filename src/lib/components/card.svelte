@@ -18,7 +18,7 @@
 		</div>
 		<div class="p-2">
 			<div class="border-b-2">
-				{#if url =''}
+				{#if !url}
 					<h3 class="text-2xl text-bold text-paynesGray">{title}</h3>
 				{:else}
 					<a href={url}><h3 class="text-2xl font-semibold text-paynesGray hover:text-cadetGray">{title}</h3></a>
@@ -28,7 +28,7 @@
 				<p class="mb-2">{desc}</p>
 			</div>
 			<div class="my-2">
-				<Button btnLabel="Got to {title}" btnType="anchor" btnStyle="secondary" link={url} />
+				<Button btnLabel="Got to {title}" btnType="anchor" btnStyle="primary" link={url} />
 			</div>
 		</div>
 	</div>

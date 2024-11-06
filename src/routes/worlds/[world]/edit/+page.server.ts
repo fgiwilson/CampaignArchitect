@@ -1,5 +1,5 @@
 import type { Actions } from '../$types';
-import { World } from '$lib/models/models';
+import { World, Campaign } from '$lib/models/models';
 import type { PageServerLoad } from '../$types';
 import { dbConnect } from '$lib/server/db';
 import mongoose from 'mongoose';
@@ -38,7 +38,7 @@ export const actions = {
 	},
 	delete: async ({ params }) => {
 		const worldID = params.world;
-
+		await Campaign.deleteMany({ world: worldID });
 		await World.findByIdAndDelete(worldID);
 		redirect(303, '/worlds/');
 	}
