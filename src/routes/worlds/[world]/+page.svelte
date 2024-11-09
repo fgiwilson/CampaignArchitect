@@ -1,6 +1,5 @@
 <script lang="ts">
 	import HeroImage from '$lib/components/heroImage.svelte';
-	//@ts-expect-error - type not explicitely defined - using :any
 	import Card from '$lib/components/Card.svelte';
 	import type { PageServerData } from '../$types';
 	import placeholder from '$lib/images/placeholder-hero.webp';
