@@ -1,38 +1,9 @@
-# create-svelte
+# RPG Architect (working title). 
+Game system Agnostic tool to to allow table top game masters to not only manage their worlrds, but most importantly use that information to build custom GM Screens for use at the table.
+## World Building
+GMs use classic methods to enter and store information about their campaign. Locations, Deities, NPCs, Orgnaizations etc. These entities are 
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+## Session Planning
+This is accomplished through "Session Planning", a system where GMs make use of the information enterred when building their world.
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+During Session Planning, GMs use various widgets to build a dashboard for their upcoming game session. This dashboard is organized using principles from Michael E. Shea's Return of the Lazy Dungeon Master, and other concepts, but is system agnostic. 
