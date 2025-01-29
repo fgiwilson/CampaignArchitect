@@ -1,5 +1,8 @@
+<!-- @migration-task Error while migrating Svelte code: Cannot use `export let` in runes mode — use `$props()` instead -->
+<svelte:options runes={true} />
 <script lang="ts">
 	import HeroImage from '$lib/components/heroImage.svelte';
+	import CampaignMenu from '$lib/components/campaignMenu.svelte';
 	import type { PageServerData } from '../$types';
 	export let data: PageServerData;
 	//@ts-expect-error - type not explicitely defined - using :any
@@ -15,10 +18,8 @@
 		/>
 	</div>
 	<div class="flex">
-		<div class=" bg-paynesGray-500 text-lightBlue-100 p-2 justify-between max-w-sm mx-auto">
-			<h4 class=" text-[24px] text-paynesGray-50 font-body font-semibold">Campaign Menu</h4>
-		</div>
-		<div class="max-w-7xl mx-auto">
+		<CampaignMenu />
+		<div class="max-w-7xl">
 			<h1 class="text-4xl font-medium text-bittersweet my-2 font-heading1">
 				{theCampaign.name} In <i>{theWorld.name}</i>
 			</h1>
@@ -27,7 +28,7 @@
 			<h3>Description:</h3>
 			<p>{theCampaign.campaignDesc}</p>
 			<p>Sessions:</p>
-			<div class="my-2 p-4 border-2 rounded border-bittersweet-700 bg-bittersweet-200">
+			<div class="mt-2 p-4 border-2 rounded border-bittersweet-700 bg-bittersweet-200">
 				<h4 class="mb-5 font-body text-xl font-semibold text-bittersweet-600 border-b-2">Danger Zone</h4>
 				<Button btnLabel="Delete Campaign" btnType="anchor" btnStyle="danger" link="" />
 			</div>

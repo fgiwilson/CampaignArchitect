@@ -6,7 +6,11 @@
 	import Card from '$lib/components/Card.svelte';
 	import type { PageServerData } from './$types';
 
-	export let data: PageServerData;
+	interface Props {
+		data: PageServerData;
+	}
+
+	let { data }: Props = $props();
 	let { foundWorlds } = data;
 </script>
 

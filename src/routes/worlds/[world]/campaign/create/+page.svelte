@@ -3,7 +3,11 @@
 	import placeholder from '$lib/images/placeholder-hero.webp';
 	import type { PageServerData } from './$types';
 
-	export let data: PageServerData;
+	interface Props {
+		data: PageServerData;
+	}
+
+	let { data }: Props = $props();
 
 	let { world } = data;
 </script>

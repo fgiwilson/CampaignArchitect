@@ -5,7 +5,11 @@
 	import placeholder from '$lib/images/placeholder-hero.webp';
 	import Button from '$lib/components/Button.svelte';
 
-	export let data: PageServerData;
+	interface Props {
+		data: PageServerData;
+	}
+
+	let { data }: Props = $props();
 	//@ts-expect-error - type not explicitely defined - using :any
 	let { theWorld, theCampaigns } = data;
 </script>

@@ -1,7 +1,11 @@
 <script lang="ts">
 	import type { PageServerData } from '../$types';
 
-	export let data: PageServerData;
+	interface Props {
+		data: PageServerData;
+	}
+
+	let { data }: Props = $props();
 	//@ts-expect-error - type not explicitely defined - using :any
 	const { world } = data;
 </script>

@@ -1,6 +1,5 @@
 <script lang="ts">
-	export let image;
-	export let alt;
+	let { image, alt } = $props();
 </script>
 
 <div class="flex flex-col">

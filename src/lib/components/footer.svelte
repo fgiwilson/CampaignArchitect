@@ -4,7 +4,7 @@
 </script>
 
 <div
-	class="w-full bg-paynesGray p-3 mt-5 grid grid-rows-2 grid-cols-4 grid-flow-* gap-1 items-center"
+	class="w-full bg-paynesGray p-3 grid grid-rows-2 grid-cols-4 grid-flow-* gap-1 items-center"
 >
 	<div id="logoBlock" class="block col-span-1">
 		<img src={RPGA_Logo} alt="RPGA Logo" class="h-14" />
