@@ -7,22 +7,31 @@
 	import Button from '$lib/components/Button.svelte';
 </script>
 
-<div>
-	<HeroImage
-		image="https://plus.unsplash.com/premium_vector-1725712789288-228ce009e654?q=80&w=3600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D "
-		alt="some Alt"
-	/>
-</div>
-<div class=" max-w-7xl mx-auto">
-	<h1 class="text-4xl font-medium text-bittersweet my-2 font-heading1">
-		{theCampaign.name} In <i>{theWorld.name}</i>
-	</h1>
-	<br />
-	<h2 class="text-3xl font-semibold font-heading2">Campaign Details</h2>
-	<h3>Description:</h3>
-	<p>{theCampaign.campaignDesc}</p>
-	<p>Sessions:</p>
-	<div>
-		<Button btnLabel='Delete Campaign' btnType='anchor' btnStyle='danger' link='' />
+<div class="flex flex-col">
+	<div class="">
+		<HeroImage
+			image="https://plus.unsplash.com/premium_vector-1725712789288-228ce009e654?q=80&w=3600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D "
+			alt="some Alt"
+		/>
 	</div>
+	<div class="flex">
+		<div class=" bg-paynesGray-500 text-lightBlue-100 p-2 justify-between max-w-sm mx-auto">
+			<h4 class=" text-[24px] text-paynesGray-50 font-body font-semibold">Campaign Menu</h4>
+		</div>
+		<div class="max-w-7xl mx-auto">
+			<h1 class="text-4xl font-medium text-bittersweet my-2 font-heading1">
+				{theCampaign.name} In <i>{theWorld.name}</i>
+			</h1>
+			<br />
+			<h2 class="text-3xl font-semibold font-heading2">Campaign Details</h2>
+			<h3>Description:</h3>
+			<p>{theCampaign.campaignDesc}</p>
+			<p>Sessions:</p>
+			<div class="my-2 p-4 border-2 rounded border-bittersweet-700 bg-bittersweet-200">
+				<h4 class="mb-5 font-body text-xl font-semibold text-bittersweet-600 border-b-2">Danger Zone</h4>
+				<Button btnLabel="Delete Campaign" btnType="anchor" btnStyle="danger" link="" />
+			</div>
+		</div>
+	</div>
+
 </div>

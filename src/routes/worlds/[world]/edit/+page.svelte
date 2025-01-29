@@ -8,6 +8,7 @@
 
 <div class=" max-w-7xl mx-auto">
 	<h1 class="text-4xl font-medium text-bittersweet my-2 font-heading1">Editing: {world.name}</h1>
+	<h2 class="text-3xl font-semibold font-heading2 mb-5">World Details</h2>
 	<form action="?/edit" class="flex flex-col w-96 mt-4" method="post">
 		<label class="font-bold mb-1" for="worldName">World name: </label>
 		<input id="worldName" name="worldName" type="text" class="mb-4" placeholder={world.name} />
@@ -19,6 +20,7 @@
 		>
 	</form>
 	<hr class="my-5" />
+	<h2 class="text-3xl font-semibold font-heading2 mb-5 text-flame-800">Danger Zone</h2>
 	<form action="?/delete" method="POST">
 		<button type="submit" class="p-2 rounded bg-flame-800 text-lightBlue-100 hover:bg-flame-600"
 			>Delte World</button
