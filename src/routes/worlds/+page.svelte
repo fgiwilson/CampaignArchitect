@@ -12,6 +12,7 @@
 
 	let { data }: Props = $props();
 	let { foundWorlds } = data;
+
 </script>
 
 <div>
@@ -31,7 +32,7 @@
 									title={myWorld.name}
 									imageAlt="Placeholder Alt"
 									image={placeholder}
-									desc={myWorld.mainDesc}
+									desc={myWorld.mainDesc.slice(0,250) + '...'}
 									url="/worlds/{myWorld._id}"
 								/>
 							</li>
@@ -42,7 +43,7 @@
 		</section>
 	</div>
 	<div class="flex">
-		<section class="flex-row">
+		<section class="flex-row mb-5">
 			<h2 class="text-3xl font-semibold font-heading2 mb-5">Create a new world</h2>
 			<Button btnLabel="Create new world" btnType="anchor" btnStyle="secondary" link="/worlds/create" />
 		</section>

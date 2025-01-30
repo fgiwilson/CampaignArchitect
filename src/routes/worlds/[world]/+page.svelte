@@ -21,11 +21,18 @@
 		<h2 class="text-3xl font-semibold font-heading2">World Details:</h2>
 		<h3 class="text-2xl font-medium text-cadetGray">World Description:</h3>
 		<p class="mb-3 ml-1">{theWorld.mainDesc}</p>
-		<a
-			href="{theWorld._id}/edit"
-			class="p-2 bg-lightBlue-300 hover:bg-lightBlue-700 text-lightBlue-800 hover:text-lightBlue-50 rounded-md w-fit mt-3"
-			>Edit World</a
-		>
+		<div>
+			<a
+				href="{theWorld._id}/edit"
+				class="p-2 bg-lightBlue-300 hover:bg-lightBlue-700 text-lightBlue-800 hover:text-lightBlue-50 rounded-md w-fit mt-3"
+				>Edit World</a
+			>
+			<a
+				class="p-2 bg-lightBlue-300 hover:bg-lightBlue-700 text-lightBlue-800 hover:text-lightBlue-50 rounded-md w-fit mt-3"
+				href="{theWorld._id}/campaign/create">Create a New Campaign</a
+			>
+		</div>
+
 		<hr class="my-5" />
 		<h2 class="text-3xl font-semibold font-heading2">Campaigns in {theWorld.name}</h2>
 		{#if theWorld.numCampaigns === 0}
@@ -48,10 +55,6 @@
 				{/each}
 			</ul>
 		{/if}
-		<a
-			class="p-2 bg-lightBlue-300 hover:bg-lightBlue-700 text-lightBlue-800 hover:text-lightBlue-50 rounded-md w-fit mt-3"
-			href="{theWorld._id}/campaign/create">Create a New Campaign</a
-		>
 	</div>
 </div>
 

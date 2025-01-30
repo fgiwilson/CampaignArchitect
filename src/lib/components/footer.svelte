@@ -1,6 +1,7 @@
 <script lang="ts">
 	//let currentYear = new Date().getFullYear().toString();
 	import RPGA_Logo from '$lib/images/RPGA_Logo.svg';
+	let year = new Date().getFullYear().toString();
 </script>
 
 <div
@@ -26,7 +27,7 @@
 	</div>
 	<div id="copyrightBlock" class="flex col-span-4 mt-4 items-end">
 		<p class="text-lightBlue">
-			&copy; RPG Architect, Formative Games - 2024 - All Rights Reserved.
+			&copy; RPG Architect, Formative Games - 2024-{year} - All Rights Reserved.
 		</p>
 	</div>
 </div>

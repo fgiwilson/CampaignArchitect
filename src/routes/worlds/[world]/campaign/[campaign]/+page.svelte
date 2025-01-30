@@ -4,8 +4,9 @@
 	import HeroImage from '$lib/components/heroImage.svelte';
 	import CampaignMenu from '$lib/components/campaignMenu.svelte';
 	import type { PageServerData } from '../$types';
-	export let data: PageServerData;
-	//@ts-expect-error - type not explicitely defined - using :any
+	import type {PageProps} from './$types';
+	let {data}: PageProps = $props();
+	//export let data: PageServerData;
 	let { theCampaign, theWorld } = data;
 	import Button from '$lib/components/Button.svelte';
 </script>
@@ -19,13 +20,13 @@
 	</div>
 	<div class="flex">
 		<CampaignMenu />
-		<div class="max-w-7xl">
+		<div class="max-w-7xl ml-5 mb-5">
 			<h1 class="text-4xl font-medium text-bittersweet my-2 font-heading1">
 				{theCampaign.name} In <i>{theWorld.name}</i>
 			</h1>
 			<br />
 			<h2 class="text-3xl font-semibold font-heading2">Campaign Details</h2>
-			<h3>Description:</h3>
+			<h3 class="">Description:</h3>
 			<p>{theCampaign.campaignDesc}</p>
 			<p>Sessions:</p>
 			<div class="mt-2 p-4 border-2 rounded border-bittersweet-700 bg-bittersweet-200">
